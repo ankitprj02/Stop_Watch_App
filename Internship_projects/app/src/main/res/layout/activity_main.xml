@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/stop_watch_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginHorizontal="24dp"
+            android:scaleType="fitCenter"
+            app:lottie_rawRes="@raw/stopwatch"
+            app:lottie_autoPlay="false"
+            android:layout_gravity="center"
+            app:lottie_loop="true"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textview"
+            android:layout_marginTop="32dp"/>
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="00:00:000"
+            android:textColor="@color/white"
+            android:textSize="42sp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginBottom="80dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/resetBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_weight="1"
+                android:text="RESET"
+                app:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/startBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_weight="1"
+                android:text="START"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:backgroundTint="#F2FF3D"/>
+
+        </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
